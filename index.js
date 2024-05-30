@@ -1,6 +1,6 @@
 import express from 'express';
-import cors from 'cors';
-import http from 'http';
+const cors = require('cors');
+const http = require('http');
 import { fileURLToPath } from 'url';
 
 const app  = express();
