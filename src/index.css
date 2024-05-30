@@ -36,6 +36,10 @@ h1 {
   line-height: 1.1;
 }
 
+.note button {
+  margin-left: 10px;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -53,6 +57,13 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+footer {
+  font-size: small;
+  color: green;
+  text-align: center;
+  margin-top: 50px;
 }
 
 @media (prefers-color-scheme: light) {
