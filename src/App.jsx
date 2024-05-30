@@ -1,6 +1,16 @@
 import Note from './components/Note'
+import React, { useEffect, useState } from 'react';
 
-const App = ({ notes }) => {
+function App() {
+  const [notes, setNotes] = useState([]);
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001/api/notes'; 
+ 
+  useEffect(() => {
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => setNotes(data))
+  }, [apiUrl])
+
   return (
     <div>
       <h1>Notes</h1>
