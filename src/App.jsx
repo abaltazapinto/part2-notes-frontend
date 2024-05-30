@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Note from './components/Note';
 
-function App() {
+
+
+const App = () => {
   const [notes, setNotes] = useState([]);
   const [showImportant, setShowImportant] = useState(false);
-  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001/api/notes';
+  const apiUrl = 'http://localhost:3001/api/notes';
 
   useEffect(() => {
     fetch(apiUrl)
